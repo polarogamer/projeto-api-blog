@@ -3,6 +3,8 @@
 import requests
 from pprint import pprint
 
+# very goog coding
+
 # Get - Obter todos recursos
 resultado_get = requests.get('https://jsonplaceholder.typicode.com/todos')
 #pprint(resultado_get.json())
