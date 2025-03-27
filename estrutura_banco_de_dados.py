@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash
 app = Flask(__name__)
 
 # Configurações
-app.config['SECRET_KEY'] = 'GHSAGHS@!#DEJK'
+app.config['SECRET_KEY'] = '*********'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 
 # Instância do SQLAlchemy
@@ -35,7 +35,7 @@ with app.app_context():
     db.create_all()
 
     # Criar usuário administrador com senha criptografada
-    senha_hash = generate_password_hash('12345')  # Criptografando a senha
-    autor = Autor(nome='Richard Erick', email='Richardfs@gmail.com', senha=senha_hash, admin=True)
+    senha_hash = generate_password_hash('*********')  # Criptografando a senha
+    autor = Autor(nome='******', email='*********', senha=senha_hash, admin=True)
     db.session.add(autor)
     db.session.commit()
